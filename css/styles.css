@@ -1,0 +1,203 @@
+/* Tipografías */
+@font-face {
+    font-family: "IntegralCF Regular";
+    src: url(../assets/fonts/IntegralCF/Fontspring-DEMO-integralcf-regular.otf);
+}
+
+@font-face {
+    font-family: "IntegralCF Heavy Oblique";
+    src: url(../assets/fonts/IntegralCF/Fontspring-DEMO-integralcf-heavyoblique.otf);
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECEAF5;
+    color: #202020;
+    font-family: "DM Sans", sans-serif;
+}
+
+select,
+select option,
+input,
+button {
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* Header del sitio */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ECEAF5;
+    color: #9C192B;
+    width: 100%;
+    font-family: "IntegralCF Regular";
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-top: -3px;
+    padding: 25px;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#header h1 span {
+    font-family: "IntegralCF Heavy Oblique";
+}
+
+#header .carrito {
+    position: absolute;
+    display: flex;
+    right: 30px;
+}
+
+.bannerJordan img {
+    width: 100%;
+    margin-top: 70px;
+}
+
+
+/* Filtro de productos */
+.filtroSeccion {
+    width: 100%;
+    text-align: center;
+    margin: 25px 0 50px;
+}
+
+.filtroSeccion .filtroFull {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px;
+}
+
+.filtroFull select {
+    appearance: none;
+    background-image: url(../assets/img/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    background-size: 18px;
+}
+
+.filtroFull .modelo select,
+.filtroFull .orden select,
+.filtroFull .busqueda input {
+    font-size: 0.9rem;
+    border: 1px solid #9C192B;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 10px 10px;
+    outline: none;
+}
+
+.filtroFull .modelo select,
+.filtroFull .orden select {
+    width: 150px;
+}
+
+.filtroFull .busqueda input {
+    width: 350px;
+}
+
+.filtroFull .busqueda input::placeholder {
+    font-style: italic;
+}
+
+.filtroFull .busqueda input::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+
+/* Lista de productos */
+.listaProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listaProductos .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+}
+
+.container article {
+    width: 225px;
+}
+
+.container article div {
+    background-color: #FFF;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.container article div:hover {
+    transform: scale(1.04);
+}
+
+.container article div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container article .producto {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.container article .precio {
+    color: #9C192B;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container article .btn-carrito {
+    display: block;
+    background-color: #9C192B;
+    color: #FFF;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.container article .btn-carrito:hover {
+    background-color: #801423;
+}
+
+
+/* Footer */
+.footerSite {
+    background-color: #202020;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 75px;
+    padding: 25px 0;
+}
+
+.footerSite span {
+    font-weight: 800;
+}
