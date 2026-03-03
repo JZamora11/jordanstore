@@ -36,6 +36,8 @@ button {
     justify-content: center;
     align-items: center;
     position: relative;
+    position: sticky;
+    top: 0;
     background-color: #ECEAF5;
     color: #9C192B;
     width: 100%;
@@ -44,9 +46,18 @@ button {
     letter-spacing: 2px;
     margin-top: -3px;
     padding: 25px;
-    position: fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+
+#header a {
+    text-decoration: none;
+    color: #9C192B;
+    transition: all .3s ease;
+}
+
+#header a:hover {
+    letter-spacing: 3px;
 }
 
 #header h1 span {
@@ -59,9 +70,14 @@ button {
     right: 30px;
 }
 
+.carrito .contador {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
 .bannerJordan img {
     width: 100%;
-    margin-top: 70px;
 }
 
 
@@ -196,6 +212,68 @@ button {
 
 .container article .btn-carrito:hover {
     background-color: #801423;
+}
+
+.container article .btn-carrito:active {
+    transform: translateY(5px);
+}
+
+.titulo-carrito {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.titulo-carrito h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#total-carrito {
+    font-size: 1.2rem;
+}
+
+#total-carrito span {
+    background-color: #9C192B;
+    padding: 4px;
+    border-radius: 5px;
+    color: #ECEAF5;
+    font-weight: 700;
+}
+
+.vaciar-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 -20px;
+}
+
+.vaciar-carrito button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #9C192B;
+    color: #ECEAF5;
+    font-size: 1.1rem;
+    border: 2px solid #9C192B;
+    border-radius: 100px;
+    padding: 15px 50px;
+    gap: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.vaciar-carrito button:hover {
+    background-color: #202020;
+    border: 2px solid #9C192B;
+    padding: 15px 60px;
+}
+
+.vaciar-carrito button:active {
+    transform: translateY(5px);
+}
+
+.carrito-limpio {
+    grid-column: 1/-1;
+    text-align: center;
 }
 
 
