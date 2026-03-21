@@ -66,12 +66,49 @@ function gestionarCarrito(producto) {
 obtenerProductos();
 sumaGuardada();
 
-const buscador = document.getElementById("buscar");
 
 // Filtro por modelo
+const filtroModelo = document.getElementById("modelos");
 
+filtroModelo.addEventListener('change', (event) => {
+    let opcionModelo = event.target.value;
+    
+    if (opcionModelo === "all") {
+        contenedorProductos.innerHTML = "";
+        listaProductos(productos);
+    } else {
+        const modeloElegido = productos.filter(producto => producto.modelo === opcionModelo);
+
+        contenedorProductos.innerHTML = "";
+        listaProductos(modeloElegido);
+    }
+})
+
+// Filtro por precio
+const filtroPrecio = document.getElementById("ordenPrecio");
+
+filtroPrecio.addEventListener('change', (event) => {
+    let ordenPorPrecio = productos.slice();
+
+    if (event.target.value === "menor-precio") {
+        ordenPorPrecio.sort((a, b) => a.precio - b.precio);
+
+        contenedorProductos.innerHTML = "";
+        listaProductos(ordenPorPrecio);
+    } else if (event.target.value === "mayor-precio") {
+        ordenPorPrecio.sort((a, b) => b.precio - a.precio);
+
+        contenedorProductos.innerHTML = "";
+        listaProductos(ordenPorPrecio);
+    } else {
+        contenedorProductos.innerHTML = "";
+        listaProductos(productos);
+    }
+})
 
 // Buscador de productos
+const buscador = document.getElementById("buscar");
+
 buscador.addEventListener('input', (event) => {
     const digitado = event.target.value.toLowerCase();
     const productosBuscados = productos.filter(producto => producto.nombre.toLowerCase().includes(digitado));
