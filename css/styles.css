@@ -161,7 +161,7 @@ button {
     width: 225px;
 }
 
-.container article div {
+.container article .div-img {
     background-color: #FFF;
     width: 100%;
     border-radius: 7px;
@@ -170,11 +170,11 @@ button {
     transition: all .3s ease;
 }
 
-.container article div:hover {
+.container article .div-img:hover {
     transform: scale(1.04);
 }
 
-.container article div img {
+.container article .div-img img {
     display: block;
     width: 100%;
     height: 100%;
@@ -216,6 +216,45 @@ button {
 
 .container article .btn-carrito:active {
     transform: translateY(5px);
+}
+
+.contenedor-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.contenedor-buttons button {
+    display: block;
+    background-color: #9C192B;
+    color: #FFF;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.contenedor-buttons button:hover {
+    background-color: #801423;
+}
+
+.contenedor-buttons button:active {
+    transform: translateY(3px);
+}
+
+.btn-small {
+    flex: 1;
+}
+
+.btn-big {
+    flex: 4;
 }
 
 .titulo-carrito {
