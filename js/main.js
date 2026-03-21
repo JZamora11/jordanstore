@@ -44,6 +44,18 @@ contenedorProductos.addEventListener('click', (event) => {
     if (event.target.classList.contains("btn-carrito")) {
         const idProducto = parseInt(event.target.getAttribute("data-id"));
         const productoBase = productos.find(producto => producto.id === idProducto);
+
+        Toastify({
+            text: "Producto agregado al carrito",
+            gravity: "bottom",
+            duration: 3000,
+            style: {
+                background: "#9C192B",
+                borderRadius: "8px",
+                fontSize: "14px",
+            },
+        }).showToast();
+
         gestionarCarrito(productoBase);
     }
 })
@@ -66,53 +78,34 @@ function gestionarCarrito(producto) {
 obtenerProductos();
 sumaGuardada();
 
-
-// Filtro por modelo
+// Filtros
 const filtroModelo = document.getElementById("modelos");
-
-filtroModelo.addEventListener('change', (event) => {
-    let opcionModelo = event.target.value;
-    
-    if (opcionModelo === "all") {
-        contenedorProductos.innerHTML = "";
-        listaProductos(productos);
-    } else {
-        const modeloElegido = productos.filter(producto => producto.modelo === opcionModelo);
-
-        contenedorProductos.innerHTML = "";
-        listaProductos(modeloElegido);
-    }
-})
-
-// Filtro por precio
 const filtroPrecio = document.getElementById("ordenPrecio");
-
-filtroPrecio.addEventListener('change', (event) => {
-    let ordenPorPrecio = productos.slice();
-
-    if (event.target.value === "menor-precio") {
-        ordenPorPrecio.sort((a, b) => a.precio - b.precio);
-
-        contenedorProductos.innerHTML = "";
-        listaProductos(ordenPorPrecio);
-    } else if (event.target.value === "mayor-precio") {
-        ordenPorPrecio.sort((a, b) => b.precio - a.precio);
-
-        contenedorProductos.innerHTML = "";
-        listaProductos(ordenPorPrecio);
-    } else {
-        contenedorProductos.innerHTML = "";
-        listaProductos(productos);
-    }
-})
-
-// Buscador de productos
 const buscador = document.getElementById("buscar");
 
-buscador.addEventListener('input', (event) => {
-    const digitado = event.target.value.toLowerCase();
-    const productosBuscados = productos.filter(producto => producto.nombre.toLowerCase().includes(digitado));
+function aplicarFiltros() {
+    const modelo = filtroModelo.value;
+    const precio = filtroPrecio.value;
+    const texto = buscador.value.toLowerCase();
+    
+    let listaFiltrada = productos.slice();
+    
+    listaFiltrada = listaFiltrada.filter(producto => producto.nombre.toLowerCase().includes(texto));
+
+    if (modelo !== "all") {
+        listaFiltrada = listaFiltrada.filter(producto => producto.modelo === modelo)
+    }
+    
+    if (precio === "menor-precio") {
+        listaFiltrada = listaFiltrada.sort((a, b) => a.precio - b.precio);
+    } else if (precio === "mayor-precio") {
+        listaFiltrada = listaFiltrada.sort((a, b) => b.precio - a.precio);
+    }
 
     contenedorProductos.innerHTML = "";
-    listaProductos(productosBuscados);
-})
+    listaProductos(listaFiltrada);
+}
+
+filtroModelo.addEventListener('change', aplicarFiltros);
+filtroPrecio.addEventListener('change', aplicarFiltros);
+buscador.addEventListener('input', aplicarFiltros);
