@@ -1,40 +1,36 @@
-const carritoProductos = document.getElementById("carrito-total");
 let productosElegidos = JSON.parse(localStorage.getItem("carrito")) || [];
+
+const carritoProductos = document.getElementById("carrito-total");
 
 function listaCarrito (productosCarrito) {
     productosCarrito.forEach(producto => {
         const tarjeta = document.createElement("article");
-        tarjeta.innerHTML = `<div class="div-img">
-                                <img src="${producto.img}">
-                             </div>
+        tarjeta.innerHTML = `<img src="${producto.img}">
 
-                             <h4 class="producto">${producto.nombre}</h4>
-                             <p class="precio">Cantidad: ${producto.cantidad}</p>
+                             <div class="info-producto">
+                                <div class="fila-superior">
+                                    <h3 class="producto">${producto.nombre}</h3>
+                                    <h4 class="precio">$${producto.precio}</h4>
+                                </div>    
+                                
+                                <div class="fila-inferior">
+                                    <div class="gestionar-cantidad">
+                                        <button data-id=${producto.id} class="btn-cantidad btn-restar">-</button>
+                                        <div class="info-cantidad">${producto.cantidad}</div>
+                                        <button data-id=${producto.id} class="btn-cantidad btn-sumar">+</button>
+                                    </div>
 
-                             <div class="contenedor-buttons">
-                                <button data-id=${producto.id} class="btn-small btn-restar">-</button>
-                                <button data-id=${producto.id} class="btn-big btn-quitar">Quitar producto</button>
-                                <button data-id=${producto.id} class="btn-small btn-sumar">+</button>
+                                    <button class="btn-eliminar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trash"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
+                                        Eliminar
+                                    </button>
+                                </div>
                              </div>`
         carritoProductos.appendChild(tarjeta);
     })
 }
 
 listaCarrito(productosElegidos);
-
-let sumaTotal = document.getElementById("total-carrito");
-
-function totalCarrito () {
-    const precioFinal = productosElegidos.reduce((sumaFinal, producto) => {
-        const subtotalProducto = producto.precio * producto.cantidad;
-
-        return sumaFinal + subtotalProducto;
-    }, 0);
-
-    sumaTotal.innerHTML = `Total a pagar: <span>$${precioFinal}</span>`;
-}
-
-totalCarrito();
 
 carritoProductos.addEventListener('click', (event) => {
     const id = parseInt(event.target.getAttribute("data-id"));
@@ -59,16 +55,3 @@ carritoProductos.addEventListener('click', (event) => {
     listaCarrito(productosElegidos);
     totalCarrito();
 });
-
-let vaciarCarrito = document.getElementById("vaciarCarrito");
-
-function vaciar() {
-    vaciarCarrito.addEventListener("click", () => {
-        productosElegidos = [];
-        localStorage.removeItem("carrito");
-        sumaTotal.innerHTML = `Total a pagar: <span>$0</span>`;
-        carritoProductos.innerHTML = `<div class="carrito-limpio">No hay productos en el carrito</div>`;
-    })
-}
-
-vaciar();

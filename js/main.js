@@ -24,7 +24,7 @@ function sumaGuardada() {
 
 // Renderizado de productos
 const contenedorProductos = document.getElementById("container");
- 
+
 function listaProductos(arrayProductos) {
     arrayProductos.forEach(producto => {
         const tarjeta = document.createElement("article");
