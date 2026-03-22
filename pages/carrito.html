@@ -33,8 +33,35 @@
         </div>
 
         <section class="seccionCarrito">
+            <div id="contenedor-vacio"></div>
             <div id="carrito-total" class="container-carrito"></div>
-            <aside id="resumen-compra" class="container-resumen">d</aside>
+            <aside id="resumen-compra" class="container-resumen">
+                <h2>Resumen de la compra</h2>
+                <hr>
+
+                <div class="subtotal">
+                    <h4>Subtotal</h4>
+                    <p id="subtotal-resumen"></p>
+                </div>
+
+                <div class="envio">
+                    <h4>Envío</h4>
+                    <p id="envio-resumen"></p>
+                </div>
+                <hr>
+
+                <div class="total-precio">
+                    <h3>Total</h3>
+                    <p id="total-pago"></p>
+                </div>
+
+                <a href="./checkout.html" id="btn-continuar-pago" class="continuar-pago">
+                    Proceder con el pago
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
+                </a>
+
+                <p class="pago-texto">Pago seguro | JordanStore</p>
+            </aside>
         </section>
     </main>
 
