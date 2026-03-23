@@ -449,10 +449,6 @@ button {
 }
 
 
-/* Page: Checkout */
-
-
-
 /* Carrito vacío */
 #contenedor-vacio {
     display: flex;
@@ -483,6 +479,98 @@ button {
 
 .carrito-vacio a:hover {
     background-color: #801423;
+}
+
+
+/* Page: Checkout */
+.container-checkout h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.container-form {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.container-form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.container-form .form-large {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-form .form-small-container {
+    display: flex;
+    gap: 30px;
+}
+
+.container-form .form-small {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.container-form div label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.container-form div label span {
+    color: #9C192B;
+    font-weight: bolder;
+}
+
+.container-form hr {
+    margin: 25px 0;
+}
+
+.container-form .form-large input,
+.container-form .form-small input {
+    background-color: #ECEAF5;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 12px 11px;
+}
+
+.form-large #nombre,
+.form-large #tarjeta {
+    margin-bottom: 12px;
+}
+
+.form-large button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    background-color: #9C192B;
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    margin: 30px 0 10px;
+    padding: 18px 0;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.form-large button:hover {
+    background-color: #801423;
+    letter-spacing: 1px;
+}
+
+.container-form p {
+    color: #9C192B;
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 

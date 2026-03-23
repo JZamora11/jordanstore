@@ -31,52 +31,60 @@
             <div class="container-checkout">
                 <h2>Proceso de pago</h2>
 
-                <div class="container-checkout">
+                <div class="container-form">
                     <form action="">
                         <h3>Datos personales</h3>
                         <div class="form-large">
-                            <label for="nombre">Nombre y apellido <span>*</span></label>
+                            <label for="nombre">Nombre y apellido<span>*</span></label>
                             <input type="text" id="nombre" required>
                         </div>
-                        <div class="form-small">
-                            <label for="tel">Teléfono <span>*</span></label>
-                            <input type="tel" maxlength="10" name="tel" id="tel" required>
-                        </div>
-                        <div class="form-small">
-                            <label for="email">Correo electrónico <span>*</span></label>
-                            <input type="email" name="email" id="email" required>
+                        <div class="form-small-container">
+                            <div class="form-small">
+                                <label for="tel">Teléfono<span>*</span></label>
+                                <input type="tel" maxlength="10" name="tel" id="tel" required>
+                            </div>
+
+                            <div class="form-small">
+                                <label for="email">Correo electrónico<span>*</span></label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
                         </div>
 
                         <hr>
 
                         <h3>Envío</h3>
-                        <div class="form-small">
-                            <label for="direccion">Dirección <span>*</span></label>
-                            <input type="text" name="direccion" id="direccion" required>
-                        </div>
-                        <div class="form-small">
-                            <label for="ciudad">Ciudad <span>*</span></label>
-                            <input type="text" name="ciudad" id="ciudad" required>
+                        <div class="form-small-container">
+                            <div class="form-small">
+                                <label for="direccion">Dirección<span>*</span></label>
+                                <input type="text" name="direccion" id="direccion" required>
+                            </div>
+
+                            <div class="form-small">
+                                <label for="ciudad">Ciudad<span>*</span></label>
+                                <input type="text" name="ciudad" id="ciudad" required>
+                            </div>
                         </div>
 
                         <hr>
 
                         <h3>Método de pago</h3>
                         <div class="form-large">
-                            <label for="tarjeta">Número de tarjeta <span>*</span></label>
+                            <label for="tarjeta">Número de tarjeta<span>*</span></label>
                             <input type="text" name="tarjeta" id="tarjeta" required>
                         </div>
-                        <div class="form-small">
-                            <label for="fecha-expiracion">Fecha de expiración <span>*</span></label>
-                            <input type="date" name="fecha-expiracion" id="fecha-expiracion" required>
-                        </div>
-                        <div class="form-small">
-                            <label for="cvv">Código de seguridad (CVV) <span>*</span></label>
-                            <input type="text" name="cvv" id="cvv" required>
+                        <div class="form-small-container">
+                            <div class="form-small">
+                                <label for="expiracion">Fecha de expiración<span>*</span></label>
+                                <input type="text" name="expiracion" id="expiracion" required>
+                            </div>
+                            <div class="form-small">
+                                <label for="cvv">Código de seguridad (CVV)<span>*</span></label>
+                                <input type="text" name="cvv" id="cvv" required>
+                            </div>
                         </div>
 
                         <div class="form-large">
-                            <button>
+                            <button type="submit">
                                 Proceder con el pago
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
                             </button>

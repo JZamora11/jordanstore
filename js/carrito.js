@@ -114,5 +114,6 @@ carritoProductos.addEventListener('click', (event) => {
     totalCarrito();
 })
 
+// Llamada a las funciones
 listaCarrito(productosElegidos);
 totalCarrito();
