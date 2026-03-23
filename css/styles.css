@@ -219,7 +219,8 @@ button {
 }
 
 /* Page: Carrito */
-.contenido-carrito {
+.contenido-carrito,
+.contenido-checkout {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
@@ -231,14 +232,16 @@ button {
     padding: 45px 5px 25px;
 }
 
-.seccionCarrito {
+.seccionCarrito,
+.seccion-checkout {
     display: flex;
     align-items: flex-start;
     gap: 85px;
     padding: 35px 0;
 }
 
-.container-carrito {
+.container-carrito,
+.container-checkout {
     width: 65%;
 }
 
@@ -343,12 +346,33 @@ button {
 }
 
 /* Resumen de la compra */
-.container-resumen {
+.container-derecha {
     position: sticky;
-    top: 110px;
-    background-color: #FFF;
     width: 35%;
+    top: 110px;
     height: auto;
+}
+
+.container-derecha .btn-volver {
+    display: inline-block;
+    color: #9C192B;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 8px 0;
+    transition: all .3s ease;
+}
+
+.container-derecha .btn-volver:hover {
+    background-color: #9C192B;
+    color: #FFF;
+    padding: 8px 10px;
+}
+
+.container-resumen {
+    background-color: #FFF;
     border-radius: 10px;
     padding: 30px;
 }
@@ -405,6 +429,12 @@ button {
     padding: 18px 0;
     margin: 18px 0;
     border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.container-resumen .continuar-pago:hover {
+    background-color: #801423;
+    letter-spacing: 1px;
 }
 
 .container-resumen .pago-texto {
@@ -417,6 +447,10 @@ button {
 .container-resumen .texto-gratis {
     color: #08cf44;
 }
+
+
+/* Page: Checkout */
+
 
 
 /* Carrito vacío */
@@ -444,6 +478,11 @@ button {
     font-weight: 700;
     font-size: 1.1rem;
     border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.carrito-vacio a:hover {
+    background-color: #801423;
 }
 
 
