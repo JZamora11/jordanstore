@@ -481,6 +481,29 @@ button {
     background-color: #801423;
 }
 
+.item-resumen {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item-resumen img {
+    width: 80px;
+    border: 1px solid #adadad;
+    border-radius: 10px;
+}
+
+.item-resumen div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.item-resumen div p {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
 
 /* Page: Checkout */
 .container-checkout h2 {
