@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout | JordanStore</title>
+    <title>¡Compra realizada! | JordanStore</title>
 
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="../css/styles.css">
@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 
     <!-- Javascript -->
-    <script defer src="../js/checkout.js"></script>
+    <script defer src="../js/exito.js"></script>
 </head>
 <body>
     <!-- Header del sitio -->
@@ -25,79 +25,62 @@
         <a href="../index.html"><h1>Jordan<span>Store</span></h1></a>
     </header>
 
-    <!-- Contenido del carrito -->
-    <main class="contenido-checkout">
-        <section class="seccion-checkout">
-            <div class="container-checkout">
-                <h2>Proceso de pago</h2>
+    <!-- Contenido de la página de compra exitosa -->
+    <main class="contenido-compra-exitosa">
+        <section class="seccion-exito">
+            <div class="container-exito">
+                <img src="../assets/img/check-compra.webp" alt="Icono de check para mostrar que la compra fue exitosa">
+                <h2>¡Orden <span>#1187</span> confirmada!</h2>
+                <p>Muchas gracias por tu compra. Tu orden ha sido realizada correctamente.<br>Te enviaremos el comprobante a tu correo electrónico dentro de las próximas 24 horas.</p>
 
-                <div class="container-form">
-                    <form id="formulario" action="">
-                        <h3>Datos personales</h3>
-                        <div class="form-large">
-                            <label for="nombre">Nombre y apellido<span>*</span></label>
-                            <input type="text" id="nombre" required>
-                        </div>
-                        <div class="form-small-container">
-                            <div class="form-small">
-                                <label for="tel">Teléfono<span>*</span></label>
-                                <input type="tel" maxlength="17" name="tel" id="tel" required>
-                            </div>
+                <div class="datos-cliente" id="datosCliente">
+                    <h3>Datos personales</h3>
+                    <table>
+                        <tr>
+                            <th>Nombre y apellido</th>
+                            <td id="nombreCliente">dsda</td>
+                        </tr>
+                        <tr>
+                            <th>Teléfono</th>
+                            <td id="telefonoCliente"></td>
+                        </tr>
+                        <tr>
+                            <th>Correo electrónico</th>
+                            <td id="correoCliente"></td>
+                        </tr>
+                    </table>
 
-                            <div class="form-small">
-                                <label for="email">Correo electrónico<span>*</span></label>
-                                <input type="email" name="email" id="email" required>
-                            </div>
-                        </div>
+                    <h3>Envío</h3>               
+                    <table>
+                        <tr>
+                            <th>Dirección de residencia</th>
+                            <td id="direccionCliente">dsada</td>
+                        </tr>
+                        <tr>
+                            <th>Ciudad</th>
+                            <td id="ciudadCliente"></td>
+                        </tr>
+                    </table>
 
-                        <hr>
-
-                        <h3>Envío</h3>
-                        <div class="form-small-container">
-                            <div class="form-small">
-                                <label for="direccion">Dirección<span>*</span></label>
-                                <input type="text" name="direccion" id="direccion" required>
-                            </div>
-
-                            <div class="form-small">
-                                <label for="ciudad">Ciudad<span>*</span></label>
-                                <input type="text" name="ciudad" id="ciudad" required>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <h3>Método de pago</h3>
-                        <div class="form-large">
-                            <label for="tarjeta">Número de tarjeta<span>*</span></label>
-                            <input type="text" maxlength="19" name="tarjeta" id="tarjeta" required>
-                        </div>
-                        <div class="form-small-container">
-                            <div class="form-small">
-                                <label for="expiracion">Fecha de expiración<span>*</span></label>
-                                <input type="text" maxlength="5" name="expiracion" id="expiracion" required>
-                            </div>
-                            <div class="form-small">
-                                <label for="cvv">Código de seguridad (CVV)<span>*</span></label>
-                                <input type="text" maxlength="3" name="cvv" id="cvv" required>
-                            </div>
-                        </div>
-
-                        <div class="form-large">
-                            <button id="btn-pagar" type="submit">
-                                Proceder con el pago
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
-                            </button>
-                        </div>
-
-                        <p>* Obligatorio</p>
-                    </form>
+                    <h3>Método de pago</h3>                  
+                    <table>
+                        <tr>
+                            <th>Número de tarjeta</th>
+                            <td id="tarjetaCliente">dsad</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha de expedición</th>
+                            <td id="expedicionCliente"></td>
+                        </tr>
+                        <tr>
+                            <th>Código de seguridad</tr>
+                            <td id="cvvCliente"></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             
             <div class="container-derecha">
-                <a href="./carrito.html" class="btn-volver"><< Volver al carrito</a>
-
                 <aside id="resumen-compra" class="container-resumen">
                     <h2>Resumen de la compra</h2>
 
@@ -122,6 +105,10 @@
                 </aside>
             </div>
         </section>
+        
+        <div class="boton-index">
+            <a href="../index.html">Volver a la tienda</a>
+        </div>
     </main>
 
     <!-- Footer -->

@@ -13,10 +13,12 @@ function listaCarrito (productosCarrito) {
     const cajaResumen = document.getElementById("resumen-compra");
     const contenedorProductos = document.getElementById("carrito-total");
     const mensajeVacio = document.getElementById("contenedor-vacio");
+    const btnVolver = document.getElementById("btn-volver");
     
     if (!productosCarrito[0]) {
         contenedorProductos.style.display = "none";
         cajaResumen.style.display = "none";
+        btnVolver.style.display = "none";
         mensajeVacio.style.display = "block";
         
         mensajeVacio.innerHTML = `<div class="carrito-vacio">
