@@ -2,13 +2,22 @@ const URL = "./db/data.json";
 let productos = [];
 
 // Fetch del JSON local
+const containerFetch = document.getElementById("fetch-error");
+
 function obtenerProductos() {
     fetch(URL)
     .then(response => response.json())
     .then(data => {
         productos = data;
-            listaProductos(data);
-        });
+        listaProductos(data);
+    })
+    .catch((error) => {
+        containerFetch.innerHTML = "<h3>Lo sentimos, hubo un error al cargar los productos.</h3>";
+        console.error("Error detectado:", error);
+    })
+    .finally(() => {
+        console.log("Petición finalizada")
+    })
 }
 
 // LocalStorage del carrito

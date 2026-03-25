@@ -248,6 +248,11 @@ button {
     width: 65%;
 }
 
+#fetch-error {
+    width: 100%;
+    text-align: center;
+}
+
 .container-carrito article {
     display: flex;
     align-items: center;
@@ -455,6 +460,9 @@ button {
 /* Carrito vacío */
 #contenedor-vacio {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
