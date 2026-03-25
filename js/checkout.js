@@ -24,7 +24,7 @@ function resumenCompra(sumaResumen) {
                                             <div>
                                                 <p>${producto.nombre}</p>
                                                 <span>Cantidad: ${producto.cantidad}</span>
-                                            </div
+                                            </div>
                                         </div>`;
 
         sumaSubtotal += producto.precio * producto.cantidad;
@@ -80,7 +80,7 @@ formulario.addEventListener('submit', (event) => {
             tarjeta: numTarjetaCliente,
             expiracion: fechaExpiracion,
             cvv: cvvCliente,
-            subTotal: subtotal.innerText,
+            subtotal: subtotal.innerText,
             envio: envio.innerText,
             totalProducto: total.innerText,
             productos: productosCheckout
