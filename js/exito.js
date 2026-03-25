@@ -18,7 +18,6 @@ const subtotal = document.getElementById("subtotal-resumen");
 const envio = document.getElementById("envio-resumen");
 const totalProducto = document.getElementById("total-pago");
 const resumenProductos = document.getElementById("lista-productos-checkout");
-const imgPath = `../${producto.img}`;
 
 // Renderizado de datos del cliente
 function datosOrden() {
@@ -33,10 +32,12 @@ function datosOrden() {
     subtotal.innerText = ordenFinal.subtotal;
     envio.innerText = ordenFinal.envio;
     totalProducto.innerText = ordenFinal.totalProducto;
-
+    
     resumenProductos.innerHTML = "";
-
+    
     ordenFinal.productos.forEach((producto) => {
+        const imgPath = `../${producto.img}`;
+        
         resumenProductos.innerHTML += `<div class="item-resumen">
                                             <img src="${imgPath}" alt="${producto.nombre}">
                                             <div>

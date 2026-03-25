@@ -10,16 +10,17 @@ const subtotal = document.getElementById("subtotal-resumen");
 const envio = document.getElementById("envio-resumen");
 const total = document.getElementById("total-pago");
 const contenedorResumen = document.getElementById("lista-productos-checkout");
-const imgPath = `../${producto.img}`;
 
 // Función del resumen
 function resumenCompra(sumaResumen) {
     contenedorResumen.innerHTML = "";
-
+    
     let sumaSubtotal = 0;
     let totalEnvio = 0;
     
     sumaResumen.forEach(producto => {
+        const imgPath = `../${producto.img}`;
+        
         contenedorResumen.innerHTML += `<div class="item-resumen">
                                             <img src="${imgPath}" alt="${producto.nombre}">
                                             <div>
