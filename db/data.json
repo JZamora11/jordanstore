@@ -1,5 +1,5 @@
 [
-    {"id": 1, "nombre": "Air Jordan 5 'Fire Red'", "modelo": "jordan-5", "precio": 300, "img": "../assets/img/air-jordan-5-fire-red.webp", "cantidad": 0},
+    {"id": 1, "nombre": "Air Jordan 5 'Fire Red'", "modelo": "jordan-5", "precio": 300, "img": "assets/img/air-jordan-5-fire-red.webp", "cantidad": 0},
     {"id": 2, "nombre": "Air Jordan 3 'Black Cement'", "modelo": "jordan-3", "precio": 200, "img": "../assets/img/air-jordan-3-black-cement.webp", "cantidad": 0},
     {"id": 3, "nombre": "Air Jordan 1 'Chicago'", "modelo": "jordan-1", "precio": 350, "img": "../assets/img/air-jordan-1-chicago.webp", "cantidad": 0},
     {"id": 4, "nombre": "Air Jordan 12 'Flu Game'", "modelo": "jordan-12", "precio": 400, "img": "../assets/img/air-jordan-12-flu-game.webp", "cantidad": 0},
