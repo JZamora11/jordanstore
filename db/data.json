@@ -1,14 +1,14 @@
 [
     {"id": 1, "nombre": "Air Jordan 5 'Fire Red'", "modelo": "jordan-5", "precio": 300, "img": "assets/img/air-jordan-5-fire-red.webp", "cantidad": 0},
-    {"id": 2, "nombre": "Air Jordan 3 'Black Cement'", "modelo": "jordan-3", "precio": 200, "img": "../assets/img/air-jordan-3-black-cement.webp", "cantidad": 0},
-    {"id": 3, "nombre": "Air Jordan 1 'Chicago'", "modelo": "jordan-1", "precio": 350, "img": "../assets/img/air-jordan-1-chicago.webp", "cantidad": 0},
-    {"id": 4, "nombre": "Air Jordan 12 'Flu Game'", "modelo": "jordan-12", "precio": 400, "img": "../assets/img/air-jordan-12-flu-game.webp", "cantidad": 0},
-    {"id": 5, "nombre": "Air Jordan 4 'White Oreo'", "modelo": "jordan-4", "precio": 100, "img": "../assets/img/air-jordan-4-white-oreo.webp", "cantidad": 0},
-    {"id": 6, "nombre": "Air Jordan 1 'Travis Scott'", "modelo": "jordan-1", "precio": 600, "img": "../assets/img/air-jordan-1-travis-scott.webp", "cantidad": 0},
-    {"id": 7, "nombre": "Air Jordan 6 'Infrared'", "modelo": "jordan-6", "precio": 200, "img": "../assets/img/air-jordan-6-infrared.webp", "cantidad": 0},
-    {"id": 8, "nombre": "Air Jordan 11 'Space Jam'", "modelo": "jordan-11", "precio": 300, "img": "../assets/img/air-jordan-11-space-jam.webp", "cantidad": 0},
-    {"id": 9, "nombre": "Air Jordan 3 'White Cement'", "modelo": "jordan-3", "precio": 250, "img": "../assets/img/air-jordan-3-white-cement.webp", "cantidad": 0},
-    {"id": 10, "nombre": "Air Jordan 1 'Bred'", "modelo": "jordan-1", "precio": 450, "img": "../assets/img/air-jordan-1-bred.webp", "cantidad": 0},
-    {"id": 11, "nombre": "Air Jordan 11 'Concord'", "modelo": "jordan-11", "precio": 700, "img": "../assets/img/air-jordan-11-concord.webp", "cantidad": 0},
-    {"id": 12, "nombre": "Air Jordan 4 'Black Cat'", "modelo": "jordan-4", "precio": 500, "img": "../assets/img/air-jordan-4-black-cat.webp", "cantidad": 0}
+    {"id": 2, "nombre": "Air Jordan 3 'Black Cement'", "modelo": "jordan-3", "precio": 200, "img": "assets/img/air-jordan-3-black-cement.webp", "cantidad": 0},
+    {"id": 3, "nombre": "Air Jordan 1 'Chicago'", "modelo": "jordan-1", "precio": 350, "img": "assets/img/air-jordan-1-chicago.webp", "cantidad": 0},
+    {"id": 4, "nombre": "Air Jordan 12 'Flu Game'", "modelo": "jordan-12", "precio": 400, "img": "assets/img/air-jordan-12-flu-game.webp", "cantidad": 0},
+    {"id": 5, "nombre": "Air Jordan 4 'White Oreo'", "modelo": "jordan-4", "precio": 100, "img": "assets/img/air-jordan-4-white-oreo.webp", "cantidad": 0},
+    {"id": 6, "nombre": "Air Jordan 1 'Travis Scott'", "modelo": "jordan-1", "precio": 600, "img": "assets/img/air-jordan-1-travis-scott.webp", "cantidad": 0},
+    {"id": 7, "nombre": "Air Jordan 6 'Infrared'", "modelo": "jordan-6", "precio": 200, "img": "assets/img/air-jordan-6-infrared.webp", "cantidad": 0},
+    {"id": 8, "nombre": "Air Jordan 11 'Space Jam'", "modelo": "jordan-11", "precio": 300, "img": "assets/img/air-jordan-11-space-jam.webp", "cantidad": 0},
+    {"id": 9, "nombre": "Air Jordan 3 'White Cement'", "modelo": "jordan-3", "precio": 250, "img": "assets/img/air-jordan-3-white-cement.webp", "cantidad": 0},
+    {"id": 10, "nombre": "Air Jordan 1 'Bred'", "modelo": "jordan-1", "precio": 450, "img": "assets/img/air-jordan-1-bred.webp", "cantidad": 0},
+    {"id": 11, "nombre": "Air Jordan 11 'Concord'", "modelo": "jordan-11", "precio": 700, "img": "assets/img/air-jordan-11-concord.webp", "cantidad": 0},
+    {"id": 12, "nombre": "Air Jordan 4 'Black Cat'", "modelo": "jordan-4", "precio": 500, "img": "assets/img/air-jordan-4-black-cat.webp", "cantidad": 0}
 ]
