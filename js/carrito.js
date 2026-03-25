@@ -7,6 +7,7 @@ const carritoProductos = document.getElementById("carrito-total");
 const subtotal = document.getElementById("subtotal-resumen");
 const envio = document.getElementById("envio-resumen");
 const total = document.getElementById("total-pago");
+const imgPath = `../${producto.img}`;
 
 // Renderizar los productos del carrito
 function listaCarrito (productosCarrito) {
@@ -38,7 +39,7 @@ function listaCarrito (productosCarrito) {
 
     productosCarrito.forEach(producto => {
         const tarjeta = document.createElement("article");
-        tarjeta.innerHTML = `<img src="${producto.img}">
+        tarjeta.innerHTML = `<img src="${imgPath}">
 
                              <div class="info-producto">
                                 <div class="fila-superior">

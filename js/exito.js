@@ -18,6 +18,7 @@ const subtotal = document.getElementById("subtotal-resumen");
 const envio = document.getElementById("envio-resumen");
 const totalProducto = document.getElementById("total-pago");
 const resumenProductos = document.getElementById("lista-productos-checkout");
+const imgPath = `../${producto.img}`;
 
 // Renderizado de datos del cliente
 function datosOrden() {
@@ -37,7 +38,7 @@ function datosOrden() {
 
     ordenFinal.productos.forEach((producto) => {
         resumenProductos.innerHTML += `<div class="item-resumen">
-                                            <img src="${producto.img}" alt="${producto.nombre}">
+                                            <img src="${imgPath}" alt="${producto.nombre}">
                                             <div>
                                                 <p>${producto.nombre}</p>
                                                 <span>Cantidad: ${producto.cantidad}</span>
